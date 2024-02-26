@@ -21,10 +21,10 @@ class CustomTabBarController: UITabBarController {
         let searchNavigationController = UINavigationController(rootViewController: searchViewController)
         searchNavigationController.tabBarItem = searchTabBarItem
 
-        let addViewController = AddViewController()
-        let addTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "AddPost.png"), tag: 2)
-        let addNavigationController = UINavigationController(rootViewController: addViewController)
-        addNavigationController.tabBarItem = addTabBarItem
+        let newViewController = NewViewController()
+        let newTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "New.png"), tag: 2)
+        let newNavigationController = UINavigationController(rootViewController: newViewController)
+        newNavigationController.tabBarItem = newTabBarItem
         
         let alarmViewController = AlarmViewController()
         let alarmTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "Heart.png"), tag: 3)
@@ -36,7 +36,7 @@ class CustomTabBarController: UITabBarController {
         let myNavigationController = UINavigationController(rootViewController: myViewController)
         myNavigationController.tabBarItem = myTabBarItem
         
-        self.viewControllers = [homeNavigationController, searchNavigationController, addNavigationController, alarmNavigationController, myNavigationController]
+        self.viewControllers = [homeNavigationController, searchNavigationController, newNavigationController, alarmNavigationController, myNavigationController]
         
         self.tabBar.barTintColor = .coustomBackgroundColor
         self.tabBar.unselectedItemTintColor = .gray

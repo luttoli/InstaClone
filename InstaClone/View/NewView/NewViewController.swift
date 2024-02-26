@@ -1,5 +1,5 @@
 //
-//  AddViewController.swift
+//  NewViewController.swift
 //  InstaClone
 //
 //  Created by 김지훈 on 2/24/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class NewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

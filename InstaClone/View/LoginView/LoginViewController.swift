@@ -78,8 +78,8 @@ class LoginViewController: UIViewController {
         }
         
         loginFooterView.snp.makeConstraints { make in
-            make.leading.equalTo(view.safeAreaLayoutGuide).offset(Constants.coustomHorizontalMargin * 2)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-Constants.coustomHorizontalMargin * 2)
+            make.leading.equalTo(view.safeAreaLayoutGuide)
+            make.trailing.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-40)
         }
     }

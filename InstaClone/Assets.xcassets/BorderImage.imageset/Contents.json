@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "BorderImage.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Add.png",
+      "filename" : "BorderImage@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "BorderImage@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

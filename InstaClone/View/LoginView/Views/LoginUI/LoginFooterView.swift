@@ -19,7 +19,7 @@ class LoginFooterView: UIView {
     lazy var footerView: UIView = {
         let footerView = UIView()
         footerView.layer.borderWidth = 2
-        footerView.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+        footerView.layer.borderColor = CGColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.1)
         return footerView
     }()
     

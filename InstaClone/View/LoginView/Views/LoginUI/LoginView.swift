@@ -60,55 +60,73 @@ class LoginView: UIView {
     //비밀번호 찾기 버튼
     lazy var forgotButton: UIButton = {
         let forgotButton = UIButton()
-        forgotButton.customButton(text: "Forgot password?", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
-        
+        forgotButton.customTextButton(text: "Forgot password?", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
         return forgotButton
     }()
     
-    //로그인 버튼
+//    //로그인 버튼
+//    lazy var loginButton: UIButton = {
+//        let loginButton = UIButton()
+//        loginButton.customButton(text: "Log in", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize14, weight: .medium), titleColor: .white, backgroundColor: .systemBlue)
+//        return loginButton
+//    }()
+    
     lazy var loginButton: UIButton = {
         let loginButton = UIButton()
-        loginButton.customButton(text: "Log in", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize14, weight: .medium), titleColor: .white, backgroundColor: .systemBlue)
+        loginButton.setImage(UIImage(named: "LoginButton.png"), for: .normal)
         return loginButton
     }()
     
     //facebook 버튼
+//    lazy var facebookButton: UIButton = {
+//        let facebookButton = UIButton()
+//        facebookButton.customButton(text: "📘 Log in with Facebook", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize16, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
+//        return facebookButton
+//    }()
+    
     lazy var facebookButton: UIButton = {
         let facebookButton = UIButton()
-        facebookButton.customButton(text: "📘 Log in with Facebook", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize16, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
+        facebookButton.setImage(UIImage(named: "FacebookLoginButton.png"), for: .normal)
         return facebookButton
     }()
     
-    //or스택뷰
-    lazy var orStackView: UIStackView = {
-        let orStackView = UIStackView(arrangedSubviews: [leftView, orLabel, rightView])
-        orStackView.customStackView(axis: .horizontal, spacing: 0, alignment: .center)
-        orStackView.distribution = .fillEqually
-        return orStackView
-    }()
+//    //or스택뷰
+//    lazy var orStackView: UIStackView = {
+//        let orStackView = UIStackView(arrangedSubviews: [leftView, orLabel, rightView])
+//        orStackView.customStackView(axis: .horizontal, spacing: 0, alignment: .center)
+//        orStackView.distribution = .fillEqually
+//        return orStackView
+//    }()
+//    
+//    //or 왼쪽뷰를 선으로 쓸라고
+//    lazy var leftView: UIView = {
+//        let leftView = UIView()
+//        leftView.layer.borderWidth = 1
+//        leftView.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+//        return leftView
+//    }()
+//    
+//    //or라벨
+//    lazy var orLabel: UILabel = {
+//        let orLabel = UILabel()
+//        orLabel.customLabel(font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .regular), textColor: .gray, alignment: .center)
+//        orLabel.text = "OR"
+//        return orLabel
+//    }()
+//
+//    //or 왼쪽뷰를 선으로 쓸라고
+//    lazy var rightView: UIView = {
+//        let rightView = UIView()
+//        rightView.layer.borderWidth = 2
+//        rightView.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+//        return rightView
+//    }()
     
-    //or 왼쪽뷰를 선으로 쓸라고
-    lazy var leftView: UIView = {
-        let leftView = UIView()
-        leftView.layer.borderWidth = 1
-        leftView.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
-        return leftView
-    }()
-    
-    //or라벨
-    lazy var orLabel: UILabel = {
-        let orLabel = UILabel()
-        orLabel.customLabel(font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .regular), textColor: .gray, alignment: .center)
-        orLabel.text = "OR"
-        return orLabel
-    }()
-    
-    //or 왼쪽뷰를 선으로 쓸라고
-    lazy var rightView: UIView = {
-        let rightView = UIView()
-        rightView.layer.borderWidth = 2
-        rightView.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
-        return rightView
+    lazy var orImageView: UIImageView = {
+        let orImageView = UIImageView()
+        orImageView.image = UIImage(named: "BorderImage.png")
+        orImageView.customImageView(contentMode: .scaleAspectFit, clipsToBounds: true, tintColor: .coustomSpecificareaColor, cornerRadius: Constants.coustomCornerRadius)
+        return orImageView
     }()
     
     //회원가입스택뷰
@@ -129,7 +147,7 @@ class LoginView: UIView {
     //회원가입버튼
     lazy var signupButton: UIButton = {
         let signupButton = UIButton()
-        signupButton.customButton(text: "Sign up.", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize14, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
+        signupButton.customTextButton(text: "Sign up.", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize14, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
         return signupButton
     }()
     
@@ -143,6 +161,7 @@ class LoginView: UIView {
         setupUI()
     }
     
+    //버튼액션
     var forgotButtonAction: (() -> Void)?
     var loginButtonAction: (() -> Void)?
     var facebookButtonAction: (() -> Void)?
@@ -195,7 +214,6 @@ class LoginView: UIView {
 //            make.centerX.equalToSuperview()
 //        }
         
-        
         //스택뷰 없이
 //        addSubview(instaLogoImageView)
 //        addSubview(textFieldStackView)
@@ -212,7 +230,8 @@ class LoginView: UIView {
         contentView.addSubview(forgotButton)
         contentView.addSubview(loginButton)
         contentView.addSubview(facebookButton)
-        contentView.addSubview(orStackView)
+//        contentView.addSubview(orStackView)
+        contentView.addSubview(orImageView)
         contentView.addSubview(signupStackView)
         
         scrollView.snp.makeConstraints { make in
@@ -248,9 +267,8 @@ class LoginView: UIView {
         
         loginButton.snp.makeConstraints { make in
             make.top.equalTo(forgotButton.snp.bottom).offset(20)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.height.equalTo(44)
+            make.leading.equalTo(safeAreaLayoutGuide)
+            make.trailing.equalTo(safeAreaLayoutGuide)
         }
         
         loginButton.addAction(UIAction(handler: { [weak self] _ in
@@ -259,22 +277,42 @@ class LoginView: UIView {
         
         facebookButton.snp.makeConstraints { make in
             make.top.equalTo(loginButton.snp.bottom).offset(30)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
+            make.leading.equalTo(safeAreaLayoutGuide)
+            make.trailing.equalTo(safeAreaLayoutGuide)
+            make.height.equalTo(18)
         }
         
         facebookButton.addAction(UIAction(handler: { [weak self] _ in
             self?.facebookButtonAction?()
         }), for: .touchUpInside)
         
-        orStackView.snp.makeConstraints { make in
+//        orStackView.snp.makeConstraints { make in
+//            make.top.equalTo(facebookButton.snp.bottom).offset(35)
+//            make.leading.equalToSuperview()
+//            make.trailing.equalToSuperview()
+//        }
+//        
+//        leftView.snp.makeConstraints { make in
+//            make.height.equalTo(1)
+//        }
+//        
+//        rightView.snp.makeConstraints { make in
+//            make.height.equalTo(1)
+//        }
+//        
+//        signupStackView.snp.makeConstraints { make in
+//            make.top.equalTo(orStackView.snp.bottom).offset(35)
+//            make.centerX.equalToSuperview()
+//        }
+        
+        orImageView.snp.makeConstraints { make in
             make.top.equalTo(facebookButton.snp.bottom).offset(35)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
         
         signupStackView.snp.makeConstraints { make in
-            make.top.equalTo(orStackView.snp.bottom).offset(35)
+            make.top.equalTo(orImageView.snp.bottom).offset(35)
             make.centerX.equalToSuperview()
         }
         
