@@ -15,8 +15,11 @@ extension UITextField {
         self.textColor = textColor
         self.textAlignment = alignment
         self.heightAnchor.constraint(equalToConstant: font.lineHeight + Constants.coustomHorizontalMargin * 2).isActive = true
+        //좌측여백
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
+        self.leftViewMode = .always
         self.layer.cornerRadius = Constants.coustomCornerRadius
-        self.backgroundColor = .coustomSpecificareaColor
+        self.backgroundColor = .coustomTextFieldColor
         self.keyboardType = keyboardType
     }
     
@@ -26,8 +29,11 @@ extension UITextField {
         self.textColor = textColor
         self.textAlignment = alignment
         self.heightAnchor.constraint(equalToConstant: font.lineHeight + Constants.coustomHorizontalMargin * 2).isActive = true
+        //좌측여백
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
+        self.leftViewMode = .always
         self.layer.cornerRadius = Constants.coustomCornerRadius
-        self.backgroundColor = .coustomSpecificareaColor
+        self.backgroundColor = .coustomTextFieldColor
         self.keyboardType = keyboardType
     }
 }

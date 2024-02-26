@@ -30,12 +30,28 @@
 		B81C06C32B89CDFD00866019 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C06C22B89CDFD00866019 /* MyViewController.swift */; };
 		B81C06C62B89E6AC00866019 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C06C52B89E6AC00866019 /* LoginViewController.swift */; };
 		B81C06C92B89E76C00866019 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C06C82B89E76C00866019 /* LoginView.swift */; };
-		B81C06CC2B89E78800866019 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B81C06CB2B89E78800866019 /* SnapKit */; };
-		B81C06CE2B89E78800866019 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B81C06CD2B89E78800866019 /* SnapKit-Dynamic */; };
 		B81C06D02B8A356D00866019 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C06CF2B8A356D00866019 /* UIImageView.swift */; };
 		B81C06D22B8A381000866019 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C06D12B8A381000866019 /* UITextField.swift */; };
 		B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C06D32B8A408800866019 /* LoginViewModel.swift */; };
+		B89615252B8BAB7600F0BD9F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B89615242B8BAB7600F0BD9F /* SnapKit */; };
+		B89615272B8C66FC00F0BD9F /* LoginFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615262B8C66FC00F0BD9F /* LoginFooterView.swift */; };
+		B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896152C2B8CC74300F0BD9F /* ForgotPasswordViewController.swift */; };
+		B896152F2B8CC75500F0BD9F /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896152E2B8CC75500F0BD9F /* FacebookLoginViewController.swift */; };
+		B89615312B8CC76200F0BD9F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615302B8CC76200F0BD9F /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B81C06DE2B8BA58F00866019 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B81C066F2B89B86D00866019 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +82,10 @@
 		B81C06CF2B8A356D00866019 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		B81C06D12B8A381000866019 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		B81C06D32B8A408800866019 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B89615262B8C66FC00F0BD9F /* LoginFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFooterView.swift; sourceTree = "<group>"; };
+		B896152C2B8CC74300F0BD9F /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B896152E2B8CC75500F0BD9F /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
+		B89615302B8CC76200F0BD9F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B81C06CC2B89E78800866019 /* SnapKit in Frameworks */,
-				B81C06CE2B89E78800866019 /* SnapKit-Dynamic in Frameworks */,
+				B89615252B8BAB7600F0BD9F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +105,7 @@
 			children = (
 				B81C06712B89B86D00866019 /* InstaClone */,
 				B81C06702B89B86D00866019 /* Products */,
+				B81C06DA2B8BA58F00866019 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,9 +242,52 @@
 		B81C06C72B89E75400866019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B81C06C82B89E76C00866019 /* LoginView.swift */,
+				B896152B2B8CC70D00F0BD9F /* LoginUI */,
+				B896152A2B8CC70200F0BD9F /* ForgotView */,
+				B89615292B8CC6F500F0BD9F /* FacebookLoginView */,
+				B89615282B8CC6E700F0BD9F /* SignupView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B81C06DA2B8BA58F00866019 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B89615282B8CC6E700F0BD9F /* SignupView */ = {
+			isa = PBXGroup;
+			children = (
+				B89615302B8CC76200F0BD9F /* SignupViewController.swift */,
+			);
+			path = SignupView;
+			sourceTree = "<group>";
+		};
+		B89615292B8CC6F500F0BD9F /* FacebookLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B896152E2B8CC75500F0BD9F /* FacebookLoginViewController.swift */,
+			);
+			path = FacebookLoginView;
+			sourceTree = "<group>";
+		};
+		B896152A2B8CC70200F0BD9F /* ForgotView */ = {
+			isa = PBXGroup;
+			children = (
+				B896152C2B8CC74300F0BD9F /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotView;
+			sourceTree = "<group>";
+		};
+		B896152B2B8CC70D00F0BD9F /* LoginUI */ = {
+			isa = PBXGroup;
+			children = (
+				B81C06C82B89E76C00866019 /* LoginView.swift */,
+				B89615262B8C66FC00F0BD9F /* LoginFooterView.swift */,
+			);
+			path = LoginUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +300,7 @@
 				B81C066B2B89B86D00866019 /* Sources */,
 				B81C066C2B89B86D00866019 /* Frameworks */,
 				B81C066D2B89B86D00866019 /* Resources */,
+				B81C06DE2B8BA58F00866019 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,8 +308,7 @@
 			);
 			name = InstaClone;
 			packageProductDependencies = (
-				B81C06CB2B89E78800866019 /* SnapKit */,
-				B81C06CD2B89E78800866019 /* SnapKit-Dynamic */,
+				B89615242B8BAB7600F0BD9F /* SnapKit */,
 			);
 			productName = InstaClone;
 			productReference = B81C066F2B89B86D00866019 /* InstaClone.app */;
@@ -325,9 +388,13 @@
 				B81C068C2B89BC5B00866019 /* UIButton.swift in Sources */,
 				B81C06BF2B89CDE500866019 /* AddViewController.swift in Sources */,
 				B81C06C32B89CDFD00866019 /* MyViewController.swift in Sources */,
+				B896152F2B8CC75500F0BD9F /* FacebookLoginViewController.swift in Sources */,
 				B81C06C92B89E76C00866019 /* LoginView.swift in Sources */,
+				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
 				B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */,
 				B81C06B02B89CA3F00866019 /* Constants.swift in Sources */,
+				B89615312B8CC76200F0BD9F /* SignupViewController.swift in Sources */,
+				B89615272B8C66FC00F0BD9F /* LoginFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +541,7 @@
 				DEVELOPMENT_TEAM = 785X8Q9TA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "인스타클론";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -502,6 +570,7 @@
 				DEVELOPMENT_TEAM = 785X8Q9TA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "인스타클론";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -555,15 +624,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B81C06CB2B89E78800866019 /* SnapKit */ = {
+		B89615242B8BAB7600F0BD9F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B81C06CA2B89E78800866019 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		B81C06CD2B89E78800866019 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B81C06CA2B89E78800866019 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
