@@ -8,17 +8,11 @@
 import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
-    //스토리셀 전체 스택뷰
+    //스토리셀 전체 스택뷰 (라이브상태 제외)
     lazy var storyStackView: UIStackView = {
-        let storyStackView = UIStackView(arrangedSubviews: [storyLiveImageStackView, storyNickName])
-        storyStackView.customStackView(axis: .vertical, spacing: 0, alignment: .center)
+        let storyStackView = UIStackView(arrangedSubviews: [storyImage, storyNickName])
+        storyStackView.customStackView(axis: .vertical, spacing: 5, alignment: .center)
         return storyStackView
-    }()
-    
-    lazy var storyLiveImageStackView: UIStackView = {
-        let storyLiveImageStackView = UIStackView(arrangedSubviews: [storyImage, storyStatusImage])
-        storyLiveImageStackView.customStackView(axis: .vertical, spacing: -10, alignment: .center)
-        return storyLiveImageStackView
     }()
     
     //스토리 이미지
@@ -54,10 +48,10 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     func setupUI() {
         contentView.addSubview(storyStackView)
+        contentView.addSubview(storyStatusImage)
         
         storyStackView.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
-        
         }
         
         storyImage.snp.makeConstraints { make in
@@ -65,6 +59,8 @@ class StoryCollectionViewCell: UICollectionViewCell {
         }
         
         storyStatusImage.snp.makeConstraints { make in
+            make.top.equalTo(storyImage.snp.bottom).offset(-10)
+            make.centerX.equalToSuperview()
             make.width.equalTo(26)
             make.height.equalTo(16)
         }

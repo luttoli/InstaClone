@@ -9,9 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     //
-    
-    
-    //
     lazy var homeTableView = HomeTableView()
     
     override func viewDidLoad() {
@@ -73,15 +70,6 @@ class HomeViewController: UIViewController {
     }
     
     func setupUI() {
-//        view.addSubview(storyCollectionView)
-//        
-//        storyCollectionView.snp.makeConstraints { make in
-//            make.top.equalTo(view.safeAreaLayoutGuide)
-//            make.leading.equalTo(view.safeAreaLayoutGuide).offset(Constants.coustomHorizontalMargin)
-//            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-Constants.coustomHorizontalMargin)
-//            make.height.equalTo(100)
-//        }
-        
         view.addSubview(homeTableView)
         
         homeTableView.snp.makeConstraints { make in
@@ -94,9 +82,6 @@ class HomeViewController: UIViewController {
     }
     
     func setData() {
-//        storyCollectionView.delegate = self
-//        storyCollectionView.dataSource = self
-        
         homeTableView.delegate = self
         homeTableView.dataSource = self
     }
@@ -108,41 +93,56 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let storyHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "StoryHeaderView") as? StoryHeaderView else { return UIView() }
         
+        //헤더뷰에서 쓸 콜랙션뷰 설정
         storyHeaderView.storyCollectionView.delegate = self
         storyHeaderView.storyCollectionView.dataSource = self
 
         return storyHeaderView
     }
     
-    //테이블뷰 헤더뷰 높이
+    //테이블뷰 헤더뷰 높이 - 없어도 되는데..?
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 98
     }
     
+    //테이블뷰 셀 갯수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return FeedData.feedList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
         //셀 선택 효과 없애기
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
-        
+//        cell.profileImage
+        cell.profileNickNameLabel.text = FeedData.feedList[indexPath.row].nickName
+        cell.profileLocationLabel.text = FeedData.feedList[indexPath.row].location
+//        cell.feedImageCollectionView
+//        cell.likebyImage
+        cell.likedbyFullText.attributedText = NSMutableAttributedString()
+            .regular(string: "Liked by", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
+            .bold(string: " \(LikedbyData.likedList[indexPath.row].likedName)", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
+            .regular(string: " and", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
+            .bold(string: " \(FeedData.feedList[indexPath.row].likeCount) others", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
+        cell.feedInfoLabel.attributedText = NSMutableAttributedString()
+            .bold(string: "\(FeedData.feedList[indexPath.row].nickName)", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
+            .regular(string: "  \(FeedData.feedList[indexPath.row].content)", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
         
         return cell
+    }
+    
+    //셀 높이
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 600
     }
     
 
 }
 
 
-
-
-
-
-
+//콜랙션뷰 설정
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        if collectionView == StoryHeaderView().storyCollectionView {
@@ -169,6 +169,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.storyNickName.text = StoryData.storyList[indexPath.row].nickName
         
+        //라이브 상태 이미지는 상태에 따라 노출, 비노출
         if StoryData.storyList[indexPath.row].liveStatus == false {
             cell.storyStatusImage.isHidden = true
         } else {
