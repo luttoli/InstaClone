@@ -31,7 +31,7 @@ class LoginView: UIView {
     //인스타 로고 이미지
     lazy var instaLogoImageView: UIImageView = {
         let instaLogoImageView = UIImageView()
-        instaLogoImageView.image = UIImage(named: "InstagramLogo.png")
+        instaLogoImageView.image = UIImage(named: "InstagramBLogo.png")
         instaLogoImageView.customImageView(contentMode: .scaleAspectFit, clipsToBounds: true, tintColor: .coustomSpecificareaColor, cornerRadius: Constants.coustomCornerRadius)
         return instaLogoImageView
     }()
@@ -74,6 +74,7 @@ class LoginView: UIView {
     lazy var loginButton: UIButton = {
         let loginButton = UIButton()
         loginButton.setImage(UIImage(named: "LoginButton.png"), for: .normal)
+//        loginButton.setImage(UIImage(named: "LoginButton.png"), for: .highlighted) //눌렀을때 클릭되면서 알파처리되듯이 눌린 액션
         return loginButton
     }()
     

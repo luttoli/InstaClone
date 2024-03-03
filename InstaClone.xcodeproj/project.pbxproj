@@ -38,6 +38,17 @@
 		B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896152C2B8CC74300F0BD9F /* ForgotPasswordViewController.swift */; };
 		B896152F2B8CC75500F0BD9F /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896152E2B8CC75500F0BD9F /* FacebookLoginViewController.swift */; };
 		B89615312B8CC76200F0BD9F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615302B8CC76200F0BD9F /* SignupViewController.swift */; };
+		B89615382B92D52C00F0BD9F /* StoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615372B92D52C00F0BD9F /* StoryCollectionView.swift */; };
+		B896153A2B92D5DD00F0BD9F /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615392B92D5DD00F0BD9F /* StoryCollectionViewCell.swift */; };
+		B896153C2B92D61200F0BD9F /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896153B2B92D61200F0BD9F /* UICollectionViewCell.swift */; };
+		B896153E2B92D74C00F0BD9F /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896153D2B92D74C00F0BD9F /* FeedModel.swift */; };
+		B89615402B92DC2B00F0BD9F /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896153F2B92DC2B00F0BD9F /* StoryModel.swift */; };
+		B89615422B92DC7100F0BD9F /* StoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615412B92DC7100F0BD9F /* StoryData.swift */; };
+		B89615442B93820400F0BD9F /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615432B93820400F0BD9F /* HomeTableView.swift */; };
+		B89615462B938CA500F0BD9F /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615452B938CA500F0BD9F /* FeedTableViewCell.swift */; };
+		B896154C2B93A97D00F0BD9F /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896154B2B93A97D00F0BD9F /* UITableViewCell.swift */; };
+		B896154E2B93AF5700F0BD9F /* StoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896154D2B93AF5700F0BD9F /* StoryHeaderView.swift */; };
+		B89615522B9425B300F0BD9F /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615512B9425B300F0BD9F /* FeedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +97,17 @@
 		B896152C2B8CC74300F0BD9F /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		B896152E2B8CC75500F0BD9F /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 		B89615302B8CC76200F0BD9F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		B89615372B92D52C00F0BD9F /* StoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionView.swift; sourceTree = "<group>"; };
+		B89615392B92D5DD00F0BD9F /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B896153B2B92D61200F0BD9F /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		B896153D2B92D74C00F0BD9F /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		B896153F2B92DC2B00F0BD9F /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
+		B89615412B92DC7100F0BD9F /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
+		B89615432B93820400F0BD9F /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		B89615452B938CA500F0BD9F /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		B896154B2B93A97D00F0BD9F /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		B896154D2B93AF5700F0BD9F /* StoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHeaderView.swift; sourceTree = "<group>"; };
+		B89615512B9425B300F0BD9F /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +153,7 @@
 				B81C067B2B89B86E00866019 /* Assets.xcassets */,
 				B81C067D2B89B86E00866019 /* LaunchScreen.storyboard */,
 				B81C06802B89B86E00866019 /* Info.plist */,
-				B81C06A42B89C94D00866019 /* SpoqaHanSansNeo_OTF_original */,
+				B89615322B8E046100F0BD9F /* Font */,
 			);
 			path = InstaClone;
 			sourceTree = "<group>";
@@ -146,6 +168,8 @@
 				B81C068B2B89BC5B00866019 /* UIButton.swift */,
 				B81C068D2B89BC6100866019 /* UIStackView.swift */,
 				B81C06D12B8A381000866019 /* UITextField.swift */,
+				B896153B2B92D61200F0BD9F /* UICollectionViewCell.swift */,
+				B896154B2B93A97D00F0BD9F /* UITableViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -153,6 +177,10 @@
 		B81C06912B89BDB900866019 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B896153D2B92D74C00F0BD9F /* FeedModel.swift */,
+				B89615512B9425B300F0BD9F /* FeedData.swift */,
+				B896153F2B92DC2B00F0BD9F /* StoryModel.swift */,
+				B89615412B92DC7100F0BD9F /* StoryData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B81C06BA2B89CDCF00866019 /* HomeViewController.swift */,
+				B89615332B92246200F0BD9F /* Views */,
 			);
 			path = HomePageView;
 			sourceTree = "<group>";
@@ -243,9 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				B896152B2B8CC70D00F0BD9F /* LoginUI */,
-				B896152A2B8CC70200F0BD9F /* ForgotView */,
-				B89615292B8CC6F500F0BD9F /* FacebookLoginView */,
-				B89615282B8CC6E700F0BD9F /* SignupView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,8 +312,47 @@
 			children = (
 				B81C06C82B89E76C00866019 /* LoginView.swift */,
 				B89615262B8C66FC00F0BD9F /* LoginFooterView.swift */,
+				B896152A2B8CC70200F0BD9F /* ForgotView */,
+				B89615292B8CC6F500F0BD9F /* FacebookLoginView */,
+				B89615282B8CC6E700F0BD9F /* SignupView */,
 			);
 			path = LoginUI;
+			sourceTree = "<group>";
+		};
+		B89615322B8E046100F0BD9F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B81C06A42B89C94D00866019 /* SpoqaHanSansNeo_OTF_original */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		B89615332B92246200F0BD9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B89615432B93820400F0BD9F /* HomeTableView.swift */,
+				B896154F2B941FB500F0BD9F /* StoryView */,
+				B89615502B941FC400F0BD9F /* FeedView */,
+				B89615452B938CA500F0BD9F /* FeedTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B896154F2B941FB500F0BD9F /* StoryView */ = {
+			isa = PBXGroup;
+			children = (
+				B896154D2B93AF5700F0BD9F /* StoryHeaderView.swift */,
+				B89615372B92D52C00F0BD9F /* StoryCollectionView.swift */,
+				B89615392B92D5DD00F0BD9F /* StoryCollectionViewCell.swift */,
+			);
+			path = StoryView;
+			sourceTree = "<group>";
+		};
+		B89615502B941FC400F0BD9F /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +439,8 @@
 			files = (
 				B81C068A2B89BC4A00866019 /* UILabel.swift in Sources */,
 				B81C06882B89BC3E00866019 /* UIFont.swift in Sources */,
+				B89615382B92D52C00F0BD9F /* StoryCollectionView.swift in Sources */,
+				B89615402B92DC2B00F0BD9F /* StoryModel.swift in Sources */,
 				B81C06C12B89CDEF00866019 /* AlarmViewController.swift in Sources */,
 				B81C06C62B89E6AC00866019 /* LoginViewController.swift in Sources */,
 				B81C06B22B89CA7300866019 /* CustomTabBarController.swift in Sources */,
@@ -381,7 +448,10 @@
 				B81C06D02B8A356D00866019 /* UIImageView.swift in Sources */,
 				B81C06732B89B86D00866019 /* AppDelegate.swift in Sources */,
 				B81C06BD2B89CDDA00866019 /* SearchViewController.swift in Sources */,
+				B89615522B9425B300F0BD9F /* FeedData.swift in Sources */,
 				B81C06902B89BC6F00866019 /* UIColor.swift in Sources */,
+				B896153E2B92D74C00F0BD9F /* FeedModel.swift in Sources */,
+				B89615442B93820400F0BD9F /* HomeTableView.swift in Sources */,
 				B81C06BB2B89CDCF00866019 /* HomeViewController.swift in Sources */,
 				B81C06D22B8A381000866019 /* UITextField.swift in Sources */,
 				B81C06752B89B86D00866019 /* SceneDelegate.swift in Sources */,
@@ -390,11 +460,17 @@
 				B81C06C32B89CDFD00866019 /* MyViewController.swift in Sources */,
 				B896152F2B8CC75500F0BD9F /* FacebookLoginViewController.swift in Sources */,
 				B81C06C92B89E76C00866019 /* LoginView.swift in Sources */,
+				B896153A2B92D5DD00F0BD9F /* StoryCollectionViewCell.swift in Sources */,
+				B89615422B92DC7100F0BD9F /* StoryData.swift in Sources */,
 				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
+				B89615462B938CA500F0BD9F /* FeedTableViewCell.swift in Sources */,
 				B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */,
+				B896154E2B93AF5700F0BD9F /* StoryHeaderView.swift in Sources */,
+				B896153C2B92D61200F0BD9F /* UICollectionViewCell.swift in Sources */,
 				B81C06B02B89CA3F00866019 /* Constants.swift in Sources */,
 				B89615312B8CC76200F0BD9F /* SignupViewController.swift in Sources */,
 				B89615272B8C66FC00F0BD9F /* LoginFooterView.swift in Sources */,
+				B896154C2B93A97D00F0BD9F /* UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

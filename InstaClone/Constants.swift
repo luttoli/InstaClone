@@ -22,5 +22,6 @@ struct Constants {
     static let coustomFontSize16: CGFloat = 16
     static let coustomFontSize14: CGFloat = 14
     static let coustomFontSize12: CGFloat = 12
+    static let coustomFontSize10: CGFloat = 10
     
 }

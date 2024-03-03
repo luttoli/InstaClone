@@ -11,6 +11,7 @@ import UIKit
 extension UIButton {
     func customTextButton(text: String, font: UIFont, titleColor: UIColor, backgroundColor: UIColor) {
         self.setTitleColor(titleColor, for: .normal)
+//        self.setTitleColor(titleColor, for: .highlighted)
         self.setTitle(text, for: .normal)
         self.titleLabel?.font = font
         self.backgroundColor = backgroundColor
