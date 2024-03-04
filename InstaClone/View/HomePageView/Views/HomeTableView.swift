@@ -22,7 +22,7 @@ class HomeTableView: UITableView {
         self.register(StoryHeaderView.self, forHeaderFooterViewReuseIdentifier: "StoryHeaderView")
         self.register(HomeTableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
         self.separatorStyle = .singleLine
-        self.backgroundColor = .clear
+        self.backgroundColor = .coustomBackgroundColor
         self.sectionFooterHeight = 0 //푸터뷰 높이 0으로 안쓰겠다는 설정
         self.showsVerticalScrollIndicator = false
     }

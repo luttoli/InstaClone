@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    //
+    //홈 화면의 전체 테이블뷰
     lazy var homeTableView = HomeTableView()
     
     override func viewDidLoad() {
@@ -24,49 +24,43 @@ class HomeViewController: UIViewController {
     //네비게이션 UI
     func navigationUI() {
         navigationController?.navigationBar.barTintColor = .coustomBackgroundColor
-                
-        navigationItem.leftBarButtonItem = leftCameraButton
         
+        //왼쪽 카메라 버튼
+        let leftCameraButton = UIButton()
+        leftCameraButton.setImage(UIImage(named: "CameraIcon.png")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        //왼쪽 카메라 버튼 클릭 이벤트
+        leftCameraButton.addAction(UIAction(handler: { _ in
+            print("왼쪽 카메라 버튼 클릭했다.")
+        }), for: .touchUpInside)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftCameraButton)
+        
+        //네베게이션 로고 이미지
         let logoImage = UIImage(named: "InstagramSLogo.png")
         navigationItem.titleView = UIImageView(image: logoImage)
         
-        navigationItem.rightBarButtonItems = [rightMessangerButton, rightFrameButton]
-    }
-    
-    //왼쪽 카메라 버튼
-    lazy var leftCameraButton: UIBarButtonItem = {
-        let leftCameraButton = UIBarButtonItem(image: UIImage(named: "CameraIcon.png"), style: .plain, target: self, action: #selector(cameraButtonAction))
-        leftCameraButton.tintColor = .black
-        return leftCameraButton
-    }()
-    
-    //왼쪽 카메라 버튼 액션
-    @objc func cameraButtonAction() {
-        print("clicked cameraButtonAction")
-    }
-    
-    //오른쪽 티비 버튼
-    lazy var rightFrameButton: UIBarButtonItem = {
-        let rightFrameButton = UIBarButtonItem(image: UIImage(named: "IGTV.png"), style: .plain, target: self, action: #selector(frameButtonAction))
-        rightFrameButton.tintColor = .black
-        return rightFrameButton
-    }()
-    
-    //오른쪽 티비 버튼 액션
-    @objc func frameButtonAction() {
-        print("clicked frameButtonAction")
-    }
-    
-    //오른쪽 메세지 버튼
-    lazy var rightMessangerButton: UIBarButtonItem = {
-        let rightMessangerButton = UIBarButtonItem(image: UIImage(named: "Messanger.png"), style: .plain, target: self, action: #selector(messangerButtonAction))
-        rightMessangerButton.tintColor = .black
-        return rightMessangerButton
-    }()
-    
-    //오른쪽 메시지 버튼 액션
-    @objc func messangerButtonAction() {
-        print("clicked messangerButtonAction")
+        //오른쪽 티비 버튼
+        let rightFrameButton = UIButton()
+        rightFrameButton.setImage(UIImage(named: "IGTV.png")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        //오른쪽 티비 버튼 클릭 이벤트
+        rightFrameButton.addAction(UIAction(handler: { _ in
+            print("오른쪽 티비 버튼 클릭했다.")
+        }), for: .touchUpInside)
+        
+        //오른쪽 메세지 버튼
+        let rightMessangerButton = UIButton()
+        rightMessangerButton.setImage(UIImage(named: "Messanger.png")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        //오른쪽 메세지 버튼 클릭 이벤트
+        rightMessangerButton.addAction(UIAction(handler: { _ in
+            print("오른쪽 메시지 버튼 클릭했다.")
+        }), for: .touchUpInside)
+        
+        //오른쪽 버튼 스택뷰
+        let rightButtonStackView = UIStackView.init(arrangedSubviews: [rightFrameButton, rightMessangerButton])
+        rightButtonStackView.axis = .horizontal
+        rightButtonStackView.spacing = 20
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButtonStackView)
     }
     
     func setupUI() {
@@ -78,14 +72,12 @@ class HomeViewController: UIViewController {
             make.trailing.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-        
     }
     
     func setData() {
         homeTableView.delegate = self
         homeTableView.dataSource = self
     }
-
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -115,6 +107,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         //셀 선택 효과 없애기
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        cell.backgroundColor = .coustomBackgroundColor
         
 //        cell.profileImage
         cell.profileNickNameLabel.text = FeedData.feedList[indexPath.row].nickName
@@ -137,7 +130,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 600
     }
-    
 
 }
 
