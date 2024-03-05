@@ -10,15 +10,21 @@ import UIKit
 class StoryCollectionViewCell: UICollectionViewCell {
     //스토리셀 전체 스택뷰 (라이브상태 제외)
     lazy var storyStackView: UIStackView = {
-        let storyStackView = UIStackView(arrangedSubviews: [storyImage, storyNickName])
+        let storyStackView = UIStackView(arrangedSubviews: [newstoryImage, storyNickName])
         storyStackView.customStackView(axis: .vertical, spacing: 5, alignment: .center)
         return storyStackView
     }()
     
     //스토리 이미지
+    lazy var newstoryImage: UIImageView = {
+        let newstoryImage = UIImageView()
+        newstoryImage.image = UIImage(named: "Oval.png")
+        return newstoryImage
+    }()
+    
     lazy var storyImage: UIImageView = {
         let storyImage = UIImageView()
-        storyImage.image = UIImage(named: "Oval.png")
+        storyImage.tintColor = .orange
         return storyImage
     }()
     
@@ -48,18 +54,25 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     func setupUI() {
         contentView.addSubview(storyStackView)
+        contentView.addSubview(storyImage)
         contentView.addSubview(storyStatusImage)
         
         storyStackView.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
         }
         
-        storyImage.snp.makeConstraints { make in
+        newstoryImage.snp.makeConstraints { make in
             make.width.height.equalTo(62)
         }
         
+        storyImage.snp.makeConstraints { make in
+            make.width.height.equalTo(56)
+            make.centerX.equalTo(newstoryImage)
+            make.centerY.equalTo(newstoryImage)
+        }
+        
         storyStatusImage.snp.makeConstraints { make in
-            make.top.equalTo(storyImage.snp.bottom).offset(-10)
+            make.top.equalTo(newstoryImage.snp.bottom).offset(-10)
             make.centerX.equalToSuperview()
             make.width.equalTo(26)
             make.height.equalTo(16)

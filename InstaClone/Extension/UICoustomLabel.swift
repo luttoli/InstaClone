@@ -24,7 +24,6 @@ extension NSMutableAttributedString {
             fatalError("Custom font '\(fontName)' not found")
         }
         
-        let font = UIFont.systemFont(ofSize: fontSize)
         let attributes: [NSAttributedString.Key: Any] = [.font: customFont]
         self.append(NSAttributedString(string: string, attributes: attributes))
         return self

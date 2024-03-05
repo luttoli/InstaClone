@@ -29,7 +29,6 @@ class StoryHeaderView: UITableViewHeaderFooterView {
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).offset(-Constants.coustomHorizontalMargin)
             make.height.equalTo(100)
         }
-        
     }
+    
 }
-

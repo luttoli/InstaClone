@@ -109,11 +109,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.backgroundColor = .coustomBackgroundColor
         
-//        cell.profileImage
+        cell.profileImage.image = FeedData.feedList[indexPath.row].profileImage
         cell.profileNickNameLabel.text = FeedData.feedList[indexPath.row].nickName
         cell.profileLocationLabel.text = FeedData.feedList[indexPath.row].location
 //        cell.feedImageCollectionView
-//        cell.likebyImage
+        cell.likebyImage.image = LikedbyData.likedList[indexPath.row].likedImage
         cell.likedbyFullText.attributedText = NSMutableAttributedString()
             .regular(string: "Liked by", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
             .bold(string: " \(LikedbyData.likedList[indexPath.row].likedName)", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
@@ -143,7 +143,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //        return Int()
         
         return StoryData.storyList.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -160,6 +159,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else { return UICollectionViewCell() }
         
         cell.storyNickName.text = StoryData.storyList[indexPath.row].nickName
+        cell.storyImage.image = StoryData.storyList[indexPath.row].storyImage
         
         //라이브 상태 이미지는 상태에 따라 노출, 비노출
         if StoryData.storyList[indexPath.row].liveStatus == false {

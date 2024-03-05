@@ -54,6 +54,8 @@
 		B89615582B94751300F0BD9F /* LikedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615572B94751300F0BD9F /* LikedBy.swift */; };
 		B896155A2B94756800F0BD9F /* LikedbyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615592B94756800F0BD9F /* LikedbyData.swift */; };
 		B896155C2B94D00E00F0BD9F /* UICoustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896155B2B94D00D00F0BD9F /* UICoustomLabel.swift */; };
+		B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615612B9608F300F0BD9F /* FeedImageData.swift */; };
+		B89615642B96094700F0BD9F /* FeedImageUrlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615632B96094700F0BD9F /* FeedImageUrlData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +120,8 @@
 		B89615572B94751300F0BD9F /* LikedBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedBy.swift; sourceTree = "<group>"; };
 		B89615592B94756800F0BD9F /* LikedbyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedbyData.swift; sourceTree = "<group>"; };
 		B896155B2B94D00D00F0BD9F /* UICoustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICoustomLabel.swift; sourceTree = "<group>"; };
+		B89615612B9608F300F0BD9F /* FeedImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageData.swift; sourceTree = "<group>"; };
+		B89615632B96094700F0BD9F /* FeedImageUrlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageUrlData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 				B81C06742B89B86D00866019 /* SceneDelegate.swift */,
 				B81C06B12B89CA7300866019 /* CustomTabBarController.swift */,
 				B81C06AF2B89CA3F00866019 /* Constants.swift */,
+				B89615612B9608F300F0BD9F /* FeedImageData.swift */,
 				B81C06862B89BC2900866019 /* Extension */,
 				B81C06912B89BDB900866019 /* Model */,
 				B81C06922B89BDD500866019 /* ViewModel */,
@@ -190,6 +195,7 @@
 			children = (
 				B896153D2B92D74C00F0BD9F /* FeedModel.swift */,
 				B89615512B9425B300F0BD9F /* FeedData.swift */,
+				B89615632B96094700F0BD9F /* FeedImageUrlData.swift */,
 				B89615572B94751300F0BD9F /* LikedBy.swift */,
 				B89615592B94756800F0BD9F /* LikedbyData.swift */,
 				B896153F2B92DC2B00F0BD9F /* StoryModel.swift */,
@@ -452,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89615642B96094700F0BD9F /* FeedImageUrlData.swift in Sources */,
 				B81C068A2B89BC4A00866019 /* UILabel.swift in Sources */,
 				B81C06882B89BC3E00866019 /* UIFont.swift in Sources */,
 				B89615382B92D52C00F0BD9F /* StoryCollectionView.swift in Sources */,
@@ -483,6 +490,7 @@
 				B89615422B92DC7100F0BD9F /* StoryData.swift in Sources */,
 				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
 				B89615582B94751300F0BD9F /* LikedBy.swift in Sources */,
+				B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */,
 				B89615462B938CA500F0BD9F /* HomeTableViewCell.swift in Sources */,
 				B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */,
 				B896154E2B93AF5700F0BD9F /* StoryHeaderView.swift in Sources */,

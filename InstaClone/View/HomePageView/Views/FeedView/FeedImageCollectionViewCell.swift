@@ -10,6 +10,8 @@ import UIKit
 class FeedImageCollectionViewCell: UICollectionViewCell {
     lazy var feedImage: UIImageView = {
         let feedImage = UIImageView()
+//        feedImage.contentMode = .scaleAspectFill
+//        feedImage.clipsToBounds = true
         return feedImage
     }()
     

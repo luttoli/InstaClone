@@ -26,7 +26,7 @@ class HomeTableViewCell: UITableViewCell {
     //프로필 이미지
     lazy var profileImage: UIImageView = {
         let profileImage = UIImageView()
-        profileImage.backgroundColor = .yellow
+//        profileImage.backgroundColor = .orange
         return profileImage
     }()
     
@@ -124,7 +124,7 @@ class HomeTableViewCell: UITableViewCell {
     //이미지
     lazy var likebyImage: UIImageView = {
         let likebyImage = UIImageView()
-        likebyImage.backgroundColor = .yellow
+//        likebyImage.backgroundColor = .orange
         return likebyImage
     }()
     
