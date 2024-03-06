@@ -7,4 +7,9 @@
 ### 1주차
 **로그인 화면**
 
-<img src="![Simulator Screenshot - iPhone 13 Pro Max - 2024-03-07 at 00 43 46](https://github.com/luttoli/InstaClone/assets/107012166/32f7f77a-46a1-4bd1-ab57-c90085f999f9)" width="207" height="447"/>
+<img src="https://github.com/luttoli/InstaClone/assets/107012166/32f7f77a-46a1-4bd1-ab57-c90085f999f9" width="207" height="447"/>
+
+
+### 2주차
+**홈 화면 (스토리, 피드 영역)**
+<img src="https://github.com/luttoli/InstaClone/assets/107012166/66d9aeb4-cd75-44b5-b8f5-0b1f68651e72" width="207" height="447"/>
