@@ -15,20 +15,8 @@ struct Feed {
     let location: String?
     var feedImage: [UIImage?]
     let likeStatus: Bool
-    let likedBy: [LikedBy]
+    let likedBy: [LikedByModel]
     let likeCount: Int
     let content: String
     let comment: [String?]
-    
-    init(nickName: String, profileImage: UIImage?, location: String?, feedImage: [UIImage?], likeStatus: Bool, likedBy: [LikedBy] , likeCount: Int, content: String, comment: [String?]) {
-        self.nickName = nickName
-        self.profileImage = profileImage
-        self.location = location
-        self.feedImage = feedImage
-        self.likeStatus = likeStatus
-        self.likedBy = likedBy
-        self.likeCount = likeCount
-        self.content = content
-        self.comment = comment
-    }
 }

@@ -26,7 +26,6 @@ class HomeTableViewCell: UITableViewCell {
     //프로필 이미지
     lazy var profileImage: UIImageView = {
         let profileImage = UIImageView()
-//        profileImage.backgroundColor = .orange
         return profileImage
     }()
     
@@ -83,14 +82,14 @@ class HomeTableViewCell: UITableViewCell {
         return likeButton
     }()
     
-    //좋아요 버튼
+    //댓글 버튼
     lazy var commentButton: UIButton = {
         let commentButton = UIButton()
         commentButton.setImage(UIImage(named: "Comment.png"), for: .normal)
         return commentButton
     }()
     
-    //좋아요 버튼
+    //메세지 버튼
     lazy var messangerButton: UIButton = {
         let messangerButton = UIButton()
         messangerButton.setImage(UIImage(named: "Messanger.png"), for: .normal)
@@ -124,7 +123,6 @@ class HomeTableViewCell: UITableViewCell {
     //이미지
     lazy var likebyImage: UIImageView = {
         let likebyImage = UIImageView()
-//        likebyImage.backgroundColor = .orange
         return likebyImage
     }()
     

@@ -137,25 +137,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 //콜랙션뷰 설정
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if collectionView == StoryHeaderView().storyCollectionView {
-//            return StoryData.storyList.count
-//        }
-//        return Int()
-        
         return StoryData.storyList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if collectionView == StoryHeaderView().storyCollectionView {
-//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else { return UICollectionViewCell() }
-//            
-//            cell.storyNickName.text = StoryData.storyList[indexPath.row].nickName
-//            
-//            return cell
-//        }
-//        
-//        return UICollectionViewCell()
-        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else { return UICollectionViewCell() }
         
         cell.storyNickName.text = StoryData.storyList[indexPath.row].nickName
@@ -172,21 +157,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if collectionView == StoryHeaderView().storyCollectionView {
-//            return CGSize(width: 62, height: 98)
-//        }
-//        return CGSize()
-        
         return CGSize(width: 62, height: 98)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        if collectionView == StoryHeaderView().storyCollectionView {
-//            return 20
-//        }
-//        
-//        return CGFloat()
-        
         return 20
     }
 }

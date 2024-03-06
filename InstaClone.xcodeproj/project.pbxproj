@@ -51,11 +51,11 @@
 		B89615522B9425B300F0BD9F /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615512B9425B300F0BD9F /* FeedData.swift */; };
 		B89615542B942B0B00F0BD9F /* FeedImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615532B942B0B00F0BD9F /* FeedImageCollectionView.swift */; };
 		B89615562B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615552B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift */; };
-		B89615582B94751300F0BD9F /* LikedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615572B94751300F0BD9F /* LikedBy.swift */; };
+		B89615582B94751300F0BD9F /* LikedByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615572B94751300F0BD9F /* LikedByModel.swift */; };
 		B896155A2B94756800F0BD9F /* LikedbyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615592B94756800F0BD9F /* LikedbyData.swift */; };
-		B896155C2B94D00E00F0BD9F /* UICoustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896155B2B94D00D00F0BD9F /* UICoustomLabel.swift */; };
+		B896155C2B94D00E00F0BD9F /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */; };
 		B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615612B9608F300F0BD9F /* FeedImageData.swift */; };
-		B89615642B96094700F0BD9F /* FeedImageUrlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615632B96094700F0BD9F /* FeedImageUrlData.swift */; };
+		B89615642B96094700F0BD9F /* FeedImageUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,11 +117,11 @@
 		B89615512B9425B300F0BD9F /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		B89615532B942B0B00F0BD9F /* FeedImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCollectionView.swift; sourceTree = "<group>"; };
 		B89615552B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		B89615572B94751300F0BD9F /* LikedBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedBy.swift; sourceTree = "<group>"; };
+		B89615572B94751300F0BD9F /* LikedByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedByModel.swift; sourceTree = "<group>"; };
 		B89615592B94756800F0BD9F /* LikedbyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedbyData.swift; sourceTree = "<group>"; };
-		B896155B2B94D00D00F0BD9F /* UICoustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICoustomLabel.swift; sourceTree = "<group>"; };
+		B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		B89615612B9608F300F0BD9F /* FeedImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageData.swift; sourceTree = "<group>"; };
-		B89615632B96094700F0BD9F /* FeedImageUrlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageUrlData.swift; sourceTree = "<group>"; };
+		B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageUrlModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 				B81C068F2B89BC6F00866019 /* UIColor.swift */,
 				B81C06872B89BC3E00866019 /* UIFont.swift */,
 				B81C06892B89BC4A00866019 /* UILabel.swift */,
-				B896155B2B94D00D00F0BD9F /* UICoustomLabel.swift */,
+				B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */,
 				B81C06CF2B8A356D00866019 /* UIImageView.swift */,
 				B81C068B2B89BC5B00866019 /* UIButton.swift */,
 				B81C068D2B89BC6100866019 /* UIStackView.swift */,
@@ -195,8 +195,8 @@
 			children = (
 				B896153D2B92D74C00F0BD9F /* FeedModel.swift */,
 				B89615512B9425B300F0BD9F /* FeedData.swift */,
-				B89615632B96094700F0BD9F /* FeedImageUrlData.swift */,
-				B89615572B94751300F0BD9F /* LikedBy.swift */,
+				B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */,
+				B89615572B94751300F0BD9F /* LikedByModel.swift */,
 				B89615592B94756800F0BD9F /* LikedbyData.swift */,
 				B896153F2B92DC2B00F0BD9F /* StoryModel.swift */,
 				B89615412B92DC7100F0BD9F /* StoryData.swift */,
@@ -458,13 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89615642B96094700F0BD9F /* FeedImageUrlData.swift in Sources */,
+				B89615642B96094700F0BD9F /* FeedImageUrlModel.swift in Sources */,
 				B81C068A2B89BC4A00866019 /* UILabel.swift in Sources */,
 				B81C06882B89BC3E00866019 /* UIFont.swift in Sources */,
 				B89615382B92D52C00F0BD9F /* StoryCollectionView.swift in Sources */,
 				B89615402B92DC2B00F0BD9F /* StoryModel.swift in Sources */,
 				B81C06C12B89CDEF00866019 /* AlarmViewController.swift in Sources */,
-				B896155C2B94D00E00F0BD9F /* UICoustomLabel.swift in Sources */,
+				B896155C2B94D00E00F0BD9F /* NSMutableAttributedString.swift in Sources */,
 				B81C06C62B89E6AC00866019 /* LoginViewController.swift in Sources */,
 				B81C06B22B89CA7300866019 /* CustomTabBarController.swift in Sources */,
 				B81C068E2B89BC6100866019 /* UIStackView.swift in Sources */,
@@ -489,7 +489,7 @@
 				B896153A2B92D5DD00F0BD9F /* StoryCollectionViewCell.swift in Sources */,
 				B89615422B92DC7100F0BD9F /* StoryData.swift in Sources */,
 				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
-				B89615582B94751300F0BD9F /* LikedBy.swift in Sources */,
+				B89615582B94751300F0BD9F /* LikedByModel.swift in Sources */,
 				B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */,
 				B89615462B938CA500F0BD9F /* HomeTableViewCell.swift in Sources */,
 				B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */,

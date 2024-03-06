@@ -13,10 +13,4 @@ struct Story {
     let nickName: String
     let storyImage: UIImage?
     let liveStatus: Bool
-    
-    init(nickName: String, storyImage: UIImage?, liveStatus: Bool) {
-        self.nickName = nickName
-        self.storyImage = storyImage
-        self.liveStatus = liveStatus
-    }
 }

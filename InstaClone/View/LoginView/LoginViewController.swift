@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    //키보드 보여주기
     @objc private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
@@ -51,6 +52,7 @@ class LoginViewController: UIViewController {
         loginView.scrollView.scrollIndicatorInsets = contentInset
     }
     
+    //키보드 숨기기
     @objc private func keyboardWillHide(_ notification: Notification) {
         let contentInset = UIEdgeInsets(
             top: 0.0,
@@ -60,7 +62,7 @@ class LoginViewController: UIViewController {
         loginView.scrollView.contentInset = contentInset
         loginView.scrollView.scrollIndicatorInsets = contentInset
     }
-    
+    //뷰 누르면 숨기기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         loginView.endEditing(true)
     }
