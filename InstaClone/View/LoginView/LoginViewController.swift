@@ -100,7 +100,8 @@ class LoginViewController: UIViewController {
         loginView.loginButtonAction = {
             print("loginbutton tad")
             let homeView = CustomTabBarController()
-            homeView.modalPresentationStyle = .overFullScreen
+            homeView.modalTransitionStyle = .crossDissolve
+            homeView.modalPresentationStyle = .fullScreen
             self.present(homeView, animated: true, completion: nil)
         }
         

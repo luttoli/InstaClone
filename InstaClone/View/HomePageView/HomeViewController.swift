@@ -31,6 +31,8 @@ class HomeViewController: UIViewController {
         //왼쪽 카메라 버튼 클릭 이벤트
         leftCameraButton.addAction(UIAction(handler: { _ in
             print("왼쪽 카메라 버튼 클릭했다.")
+            let cameraView = CameraViewController()
+            self.navigationController?.pushViewController(cameraView, animated: true)
         }), for: .touchUpInside)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftCameraButton)
@@ -45,6 +47,8 @@ class HomeViewController: UIViewController {
         //오른쪽 티비 버튼 클릭 이벤트
         rightFrameButton.addAction(UIAction(handler: { _ in
             print("오른쪽 티비 버튼 클릭했다.")
+            let tvView = TVViewController()
+            self.navigationController?.pushViewController(tvView, animated: true)
         }), for: .touchUpInside)
         
         //오른쪽 메세지 버튼
@@ -53,6 +57,8 @@ class HomeViewController: UIViewController {
         //오른쪽 메세지 버튼 클릭 이벤트
         rightMessangerButton.addAction(UIAction(handler: { _ in
             print("오른쪽 메시지 버튼 클릭했다.")
+            let messageView = MessageViewController()
+            self.navigationController?.pushViewController(messageView, animated: true)
         }), for: .touchUpInside)
         
         //오른쪽 버튼 스택뷰
@@ -78,6 +84,7 @@ class HomeViewController: UIViewController {
         homeTableView.delegate = self
         homeTableView.dataSource = self
     }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -109,9 +116,45 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.backgroundColor = .coustomBackgroundColor
         
-        cell.profileImage.image = FeedData.feedList[indexPath.row].profileImage
-        cell.profileNickNameLabel.text = FeedData.feedList[indexPath.row].nickName
-        cell.profileLocationLabel.text = FeedData.feedList[indexPath.row].location
+        //프로필 이미지 버튼 설정, 클릭 이벤트
+        cell.profileImageButton.setImage(FeedData.feedList[indexPath.row].profileImage, for: .normal)
+        cell.profileImageButton.addAction(UIAction(handler: { _ in
+            print("프로필 이미지 클릭")
+            let profileView = ProfileViewController()
+            profileView.profileViewModel.profileDetailData = FeedData.feedList[indexPath.row]
+            self.navigationController?.pushViewController(profileView, animated: true)
+        }), for: .touchUpInside)
+        
+        //닉네임 버튼 설정, 클릭 이벤트
+        cell.profileNickNameButton.setTitle(FeedData.feedList[indexPath.row].nickName, for: .normal)
+        cell.profileNickNameButton.addAction(UIAction(handler: { _ in
+            print("프로필 닉네임 클릭")
+            let profileView = ProfileViewController()
+            profileView.profileViewModel.profileDetailData = FeedData.feedList[indexPath.row]
+            self.navigationController?.pushViewController(profileView, animated: true)
+        }), for: .touchUpInside)
+        
+        //지역 버튼 설정, 있고 없고 세팅, 클릭 이벤트
+        if FeedData.feedList[indexPath.row].location?.description == nil {
+            cell.profileLocationButton.isHidden = true
+        } else {
+            cell.profileLocationButton.setTitle(FeedData.feedList[indexPath.row].location, for: .normal)
+            cell.profileLocationButton.addAction(UIAction(handler: { _ in
+                print("프로필 지역 클릭")
+                let locationView = LocationViewController()
+                locationView.locationViewModel.locationDetailData = FeedData.feedList[indexPath.row]
+                self.navigationController?.pushViewController(locationView, animated: true)
+            }), for: .touchUpInside)
+        }
+        
+        //세팅버튼 클릭 이벤트
+        cell.settingButton.addAction(UIAction(handler: { _ in
+            print("세팅 버튼 클릭")
+            let settingView = SettingFeedViewController()
+            settingView.modalPresentationStyle = .pageSheet
+            self.present(settingView, animated: true)
+        }), for: .touchUpInside)
+        
 //        cell.feedImageCollectionView
         cell.likebyImage.image = LikedbyData.likedList[indexPath.row].likedImage
         cell.likedbyFullText.attributedText = NSMutableAttributedString()
@@ -122,6 +165,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.feedInfoLabel.attributedText = NSMutableAttributedString()
             .bold(string: "\(FeedData.feedList[indexPath.row].nickName)", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
             .regular(string: "  \(FeedData.feedList[indexPath.row].content)", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
+        
+        //컬랙션뷰셀, 뷰 거꾸로 올라와서 여기서 부터 뿌린다, 데이터를 넘겨준다 생각하기
         
         return cell
     }

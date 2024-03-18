@@ -12,4 +12,5 @@
 
 ### 2주차
 **홈 화면 (스토리, 피드 영역)**
+
 <img src="https://github.com/luttoli/InstaClone/assets/107012166/66d9aeb4-cd75-44b5-b8f5-0b1f68651e72" width="207" height="447"/>

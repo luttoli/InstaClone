@@ -13,7 +13,7 @@ struct Feed {
     let nickName: String
     let profileImage: UIImage?
     let location: String?
-    var feedImage: [UIImage?]
+    var feedImage: [String?]
     let likeStatus: Bool
     let likedBy: [LikedByModel]
     let likeCount: Int

@@ -57,6 +57,7 @@ class LoginView: UIView {
         forgotButton.customTextButton(text: "Forgot password?", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
         return forgotButton
     }()
+    var forgotButtonAction: (() -> Void)?
     
     //로그인 버튼
     lazy var loginButton: UIButton = {
@@ -65,6 +66,7 @@ class LoginView: UIView {
 //        loginButton.setImage(UIImage(named: "LoginButton.png"), for: .highlighted) //눌렀을때 클릭되면서 알파처리되듯이 눌린 액션
         return loginButton
     }()
+    var loginButtonAction: (() -> Void)?
     
     //facebook 버튼
     lazy var facebookButton: UIButton = {
@@ -72,6 +74,7 @@ class LoginView: UIView {
         facebookButton.setImage(UIImage(named: "FacebookLoginButton.png"), for: .normal)
         return facebookButton
     }()
+    var facebookButtonAction: (() -> Void)?
     
     //or 이미지
     lazy var orImageView: UIImageView = {
@@ -102,6 +105,7 @@ class LoginView: UIView {
         signupButton.customTextButton(text: "Sign up.", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize14, weight: .regular), titleColor: .systemBlue, backgroundColor: .clear)
         return signupButton
     }()
+    var signupButtonAction: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -112,12 +116,6 @@ class LoginView: UIView {
         super.init(coder: coder)
         setupUI()
     }
-    
-    //버튼액션
-    var forgotButtonAction: (() -> Void)?
-    var loginButtonAction: (() -> Void)?
-    var facebookButtonAction: (() -> Void)?
-    var signupButtonAction: (() -> Void)?
     
     private func setupUI() {
         addSubview(scrollView)

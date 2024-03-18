@@ -56,6 +56,19 @@
 		B896155C2B94D00E00F0BD9F /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */; };
 		B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615612B9608F300F0BD9F /* FeedImageData.swift */; };
 		B89615642B96094700F0BD9F /* FeedImageUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */; };
+		B8AA36E12BA7DD650053FF97 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36E02BA7DD650053FF97 /* MessageViewController.swift */; };
+		B8AA36E32BA7DD8B0053FF97 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36E22BA7DD8B0053FF97 /* TVViewController.swift */; };
+		B8AA36E52BA7DDA70053FF97 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36E42BA7DDA70053FF97 /* CameraViewController.swift */; };
+		B8AA36E92BA7E5F00053FF97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36E82BA7E5F00053FF97 /* ProfileViewController.swift */; };
+		B8AA36EC2BA7EFE10053FF97 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36EB2BA7EFE10053FF97 /* LocationViewController.swift */; };
+		B8AA36EE2BA80F110053FF97 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36ED2BA80F110053FF97 /* HomeViewModel.swift */; };
+		B8AA36F02BA80F1D0053FF97 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36EF2BA80F1D0053FF97 /* ProfileViewModel.swift */; };
+		B8AA36F22BA814780053FF97 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36F12BA814780053FF97 /* LocationViewModel.swift */; };
+		B8AA36F52BA81E230053FF97 /* SettingFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36F42BA81E230053FF97 /* SettingFeedViewController.swift */; };
+		B8AA36F92BA83DCA0053FF97 /* SettingFeedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36F82BA83DCA0053FF97 /* SettingFeedTableView.swift */; };
+		B8AA36FB2BA847120053FF97 /* SettingFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FA2BA847120053FF97 /* SettingFeedTableViewCell.swift */; };
+		B8AA36FD2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */; };
+		B8AA36FF2BA894740053FF97 /* SettingFeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +135,19 @@
 		B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		B89615612B9608F300F0BD9F /* FeedImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageData.swift; sourceTree = "<group>"; };
 		B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageUrlModel.swift; sourceTree = "<group>"; };
+		B8AA36E02BA7DD650053FF97 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		B8AA36E22BA7DD8B0053FF97 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
+		B8AA36E42BA7DDA70053FF97 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B8AA36E82BA7E5F00053FF97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B8AA36EB2BA7EFE10053FF97 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		B8AA36ED2BA80F110053FF97 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B8AA36EF2BA80F1D0053FF97 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B8AA36F12BA814780053FF97 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		B8AA36F42BA81E230053FF97 /* SettingFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedViewController.swift; sourceTree = "<group>"; };
+		B8AA36F82BA83DCA0053FF97 /* SettingFeedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedTableView.swift; sourceTree = "<group>"; };
+		B8AA36FA2BA847120053FF97 /* SettingFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedTableViewCell.swift; sourceTree = "<group>"; };
+		B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +234,9 @@
 			isa = PBXGroup;
 			children = (
 				B81C06D32B8A408800866019 /* LoginViewModel.swift */,
+				B8AA36ED2BA80F110053FF97 /* HomeViewModel.swift */,
+				B8AA36EF2BA80F1D0053FF97 /* ProfileViewModel.swift */,
+				B8AA36F12BA814780053FF97 /* LocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -349,9 +378,8 @@
 		B89615332B92246200F0BD9F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B89615432B93820400F0BD9F /* HomeTableView.swift */,
-				B896154F2B941FB500F0BD9F /* StoryView */,
-				B89615502B941FC400F0BD9F /* FeedView */,
+				B8AA36DF2BA7DD110053FF97 /* NaviButtonViews */,
+				B8AA36E62BA7E5B50053FF97 /* HomeView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +402,57 @@
 				B89615552B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift */,
 			);
 			path = FeedView;
+			sourceTree = "<group>";
+		};
+		B8AA36DF2BA7DD110053FF97 /* NaviButtonViews */ = {
+			isa = PBXGroup;
+			children = (
+				B8AA36E42BA7DDA70053FF97 /* CameraViewController.swift */,
+				B8AA36E22BA7DD8B0053FF97 /* TVViewController.swift */,
+				B8AA36E02BA7DD650053FF97 /* MessageViewController.swift */,
+			);
+			path = NaviButtonViews;
+			sourceTree = "<group>";
+		};
+		B8AA36E62BA7E5B50053FF97 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B89615432B93820400F0BD9F /* HomeTableView.swift */,
+				B896154F2B941FB500F0BD9F /* StoryView */,
+				B89615502B941FC400F0BD9F /* FeedView */,
+				B8AA36E72BA7E5D50053FF97 /* ProfileView */,
+				B8AA36EA2BA7EFC90053FF97 /* LocationView */,
+				B8AA36F32BA81E060053FF97 /* settingView */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B8AA36E72BA7E5D50053FF97 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				B8AA36E82BA7E5F00053FF97 /* ProfileViewController.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		B8AA36EA2BA7EFC90053FF97 /* LocationView */ = {
+			isa = PBXGroup;
+			children = (
+				B8AA36EB2BA7EFE10053FF97 /* LocationViewController.swift */,
+			);
+			path = LocationView;
+			sourceTree = "<group>";
+		};
+		B8AA36F32BA81E060053FF97 /* settingView */ = {
+			isa = PBXGroup;
+			children = (
+				B8AA36F42BA81E230053FF97 /* SettingFeedViewController.swift */,
+				B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */,
+				B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */,
+				B8AA36F82BA83DCA0053FF97 /* SettingFeedTableView.swift */,
+				B8AA36FA2BA847120053FF97 /* SettingFeedTableViewCell.swift */,
+			);
+			path = settingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,13 +538,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B89615642B96094700F0BD9F /* FeedImageUrlModel.swift in Sources */,
+				B8AA36FF2BA894740053FF97 /* SettingFeedCollectionView.swift in Sources */,
 				B81C068A2B89BC4A00866019 /* UILabel.swift in Sources */,
 				B81C06882B89BC3E00866019 /* UIFont.swift in Sources */,
 				B89615382B92D52C00F0BD9F /* StoryCollectionView.swift in Sources */,
 				B89615402B92DC2B00F0BD9F /* StoryModel.swift in Sources */,
 				B81C06C12B89CDEF00866019 /* AlarmViewController.swift in Sources */,
+				B8AA36FD2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift in Sources */,
 				B896155C2B94D00E00F0BD9F /* NSMutableAttributedString.swift in Sources */,
 				B81C06C62B89E6AC00866019 /* LoginViewController.swift in Sources */,
+				B8AA36E32BA7DD8B0053FF97 /* TVViewController.swift in Sources */,
 				B81C06B22B89CA7300866019 /* CustomTabBarController.swift in Sources */,
 				B81C068E2B89BC6100866019 /* UIStackView.swift in Sources */,
 				B81C06D02B8A356D00866019 /* UIImageView.swift in Sources */,
@@ -479,6 +561,7 @@
 				B81C06D22B8A381000866019 /* UITextField.swift in Sources */,
 				B81C06752B89B86D00866019 /* SceneDelegate.swift in Sources */,
 				B81C068C2B89BC5B00866019 /* UIButton.swift in Sources */,
+				B8AA36F92BA83DCA0053FF97 /* SettingFeedTableView.swift in Sources */,
 				B89615542B942B0B00F0BD9F /* FeedImageCollectionView.swift in Sources */,
 				B896155A2B94756800F0BD9F /* LikedbyData.swift in Sources */,
 				B81C06BF2B89CDE500866019 /* NewViewController.swift in Sources */,
@@ -487,17 +570,26 @@
 				B896152F2B8CC75500F0BD9F /* FacebookLoginViewController.swift in Sources */,
 				B81C06C92B89E76C00866019 /* LoginView.swift in Sources */,
 				B896153A2B92D5DD00F0BD9F /* StoryCollectionViewCell.swift in Sources */,
+				B8AA36F02BA80F1D0053FF97 /* ProfileViewModel.swift in Sources */,
 				B89615422B92DC7100F0BD9F /* StoryData.swift in Sources */,
 				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
 				B89615582B94751300F0BD9F /* LikedByModel.swift in Sources */,
+				B8AA36E52BA7DDA70053FF97 /* CameraViewController.swift in Sources */,
+				B8AA36F52BA81E230053FF97 /* SettingFeedViewController.swift in Sources */,
 				B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */,
+				B8AA36EC2BA7EFE10053FF97 /* LocationViewController.swift in Sources */,
 				B89615462B938CA500F0BD9F /* HomeTableViewCell.swift in Sources */,
+				B8AA36E12BA7DD650053FF97 /* MessageViewController.swift in Sources */,
 				B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */,
 				B896154E2B93AF5700F0BD9F /* StoryHeaderView.swift in Sources */,
 				B896153C2B92D61200F0BD9F /* UICollectionViewCell.swift in Sources */,
 				B81C06B02B89CA3F00866019 /* Constants.swift in Sources */,
+				B8AA36EE2BA80F110053FF97 /* HomeViewModel.swift in Sources */,
 				B89615312B8CC76200F0BD9F /* SignupViewController.swift in Sources */,
+				B8AA36E92BA7E5F00053FF97 /* ProfileViewController.swift in Sources */,
+				B8AA36F22BA814780053FF97 /* LocationViewModel.swift in Sources */,
 				B89615272B8C66FC00F0BD9F /* LoginFooterView.swift in Sources */,
+				B8AA36FB2BA847120053FF97 /* SettingFeedTableViewCell.swift in Sources */,
 				B896154C2B93A97D00F0BD9F /* UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

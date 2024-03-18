@@ -18,22 +18,37 @@ class HomeTableViewCell: UITableViewCell {
     
     //프로필 이미지 + 텍스트 스택뷰
     lazy var profileStackView: UIStackView = {
-        let profileStackView = UIStackView(arrangedSubviews: [profileImage, profileTextStackView, settingButton])
+        let profileStackView = UIStackView(arrangedSubviews: [profileImageButton, profileTextStackView, settingButton])
         profileStackView.customStackView(axis: .horizontal, spacing: 10, alignment: .fill)
         return profileStackView
     }()
     
     //프로필 이미지
-    lazy var profileImage: UIImageView = {
-        let profileImage = UIImageView()
-        return profileImage
+    lazy var profileImageButton: UIButton = {
+        let profileImageButton = UIButton()
+        return profileImageButton
     }()
     
-    //프로필 텍스트
+    //프로필 텍스트 스택뷰
     lazy var profileTextStackView: UIStackView = {
-        let profileTextStackView = UIStackView(arrangedSubviews: [profileNickNameLabel, profileLocationLabel])
-        profileTextStackView.customStackView(axis: .vertical, spacing: 0, alignment: .fill)
+        let profileTextStackView = UIStackView(arrangedSubviews: [profileNickNameButton, profileLocationButton])
+        profileTextStackView.customStackView(axis: .vertical, spacing: 0, alignment: .leading)
+        profileTextStackView.distribution = .fill
         return profileTextStackView
+    }()
+    
+    //닉네임
+    lazy var profileNickNameButton: UIButton = {
+        let profileNickNameButton = UIButton()
+        profileNickNameButton.customTextButton(text: "", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .bold), titleColor: .black, backgroundColor: .clear)
+        return profileNickNameButton
+    }()
+    
+    //위치
+    lazy var profileLocationButton: UIButton = {
+        let profileLocationButton = UIButton()
+        profileLocationButton.customTextButton(text: "", font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize10, weight: .regular), titleColor: .black, backgroundColor: .clear)
+        return profileLocationButton
     }()
     
     //설정 버튼
@@ -41,20 +56,6 @@ class HomeTableViewCell: UITableViewCell {
         let settingButton = UIButton()
         settingButton.setImage(UIImage(named: "More.png"), for: .normal)
         return settingButton
-    }()
-    
-    //닉네임
-    lazy var profileNickNameLabel: UILabel = {
-        let profileNickNameLabel = UILabel()
-        profileNickNameLabel.customLabel(font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize12, weight: .bold), textColor: .black, alignment: .left)
-        return profileNickNameLabel
-    }()
-    
-    //위치
-    lazy var profileLocationLabel: UILabel = {
-        let profileLocationLabel = UILabel()
-        profileLocationLabel.customLabel(font: UIFont.spoqaHanSansNeo(size: Constants.coustomFontSize10, weight: .regular), textColor: .black, alignment: .left)
-        return profileLocationLabel
     }()
     
     //피드 이미지 콜랙션뷰
@@ -155,7 +156,6 @@ class HomeTableViewCell: UITableViewCell {
         return feedInfoLabel
     }()
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -179,8 +179,16 @@ class HomeTableViewCell: UITableViewCell {
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).offset(-Constants.coustomHorizontalMargin)
         }
         
-        profileImage.snp.makeConstraints { make in
+        profileImageButton.snp.makeConstraints { make in
             make.width.height.equalTo(32)
+        }
+        
+        profileNickNameButton.snp.makeConstraints { make in
+            make.height.equalTo(16)
+        }
+        
+        profileLocationButton.snp.makeConstraints { make in
+            make.height.equalTo(13)
         }
         
         settingButton.snp.makeConstraints { make in
