@@ -17,7 +17,7 @@ class CameraViewController: UIViewController {
     }
     
     func navigationUI() {
-        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.barTintColor = .coustomBackgroundColor
         
         navigationItem.title = "⚡️"
         

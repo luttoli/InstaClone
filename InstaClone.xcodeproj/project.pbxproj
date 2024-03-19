@@ -69,6 +69,7 @@
 		B8AA36FB2BA847120053FF97 /* SettingFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FA2BA847120053FF97 /* SettingFeedTableViewCell.swift */; };
 		B8AA36FD2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */; };
 		B8AA36FF2BA894740053FF97 /* SettingFeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */; };
+		B8AA37062BA9CC140053FF97 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA37052BA9CC140053FF97 /* CommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -148,6 +149,7 @@
 		B8AA36FA2BA847120053FF97 /* SettingFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedTableViewCell.swift; sourceTree = "<group>"; };
 		B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedCollectionView.swift; sourceTree = "<group>"; };
+		B8AA37052BA9CC140053FF97 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,7 +424,10 @@
 				B89615502B941FC400F0BD9F /* FeedView */,
 				B8AA36E72BA7E5D50053FF97 /* ProfileView */,
 				B8AA36EA2BA7EFC90053FF97 /* LocationView */,
-				B8AA36F32BA81E060053FF97 /* settingView */,
+				B8AA36F32BA81E060053FF97 /* SettingView */,
+				B8AA37042BA9CA3C0053FF97 /* CommentView */,
+				B8AA37032BA9CA380053FF97 /* ShareView */,
+				B8AA37022BA9CA0A0053FF97 /* SaveView */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -443,7 +448,7 @@
 			path = LocationView;
 			sourceTree = "<group>";
 		};
-		B8AA36F32BA81E060053FF97 /* settingView */ = {
+		B8AA36F32BA81E060053FF97 /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
 				B8AA36F42BA81E230053FF97 /* SettingFeedViewController.swift */,
@@ -452,7 +457,30 @@
 				B8AA36F82BA83DCA0053FF97 /* SettingFeedTableView.swift */,
 				B8AA36FA2BA847120053FF97 /* SettingFeedTableViewCell.swift */,
 			);
-			path = settingView;
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		B8AA37022BA9CA0A0053FF97 /* SaveView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaveView;
+			sourceTree = "<group>";
+		};
+		B8AA37032BA9CA380053FF97 /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ShareView;
+			path = ../ShareView;
+			sourceTree = "<group>";
+		};
+		B8AA37042BA9CA3C0053FF97 /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				B8AA37052BA9CC140053FF97 /* CommentViewController.swift */,
+			);
+			path = CommentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +575,7 @@
 				B8AA36FD2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift in Sources */,
 				B896155C2B94D00E00F0BD9F /* NSMutableAttributedString.swift in Sources */,
 				B81C06C62B89E6AC00866019 /* LoginViewController.swift in Sources */,
+				B8AA37062BA9CC140053FF97 /* CommentViewController.swift in Sources */,
 				B8AA36E32BA7DD8B0053FF97 /* TVViewController.swift in Sources */,
 				B81C06B22B89CA7300866019 /* CustomTabBarController.swift in Sources */,
 				B81C068E2B89BC6100866019 /* UIStackView.swift in Sources */,

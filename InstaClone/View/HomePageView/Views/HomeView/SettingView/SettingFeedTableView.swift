@@ -25,7 +25,5 @@ class SettingFeedTableView: UITableView {
         self.separatorStyle = .singleLine //라인 설정
         self.separatorColor = .white //라인색
         self.separatorInsetReference = .fromAutomaticInsets //라인 여백 - 사용 환경에 따라 알아서 설정?
-        
     }
-
 }

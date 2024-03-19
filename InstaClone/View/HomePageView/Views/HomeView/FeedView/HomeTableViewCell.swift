@@ -71,7 +71,7 @@ class HomeTableViewCell: UITableViewCell {
     
     //왼쪽에 버튼 세개만 들어있는 스택뷰
     lazy var leftButtonStackView: UIStackView = {
-        let leftButtonStackView = UIStackView(arrangedSubviews: [likeButton, commentButton, messangerButton])
+        let leftButtonStackView = UIStackView(arrangedSubviews: [likeButton, commentButton, shareButton])
         leftButtonStackView.customStackView(axis: .horizontal, spacing: 20, alignment: .fill)
         return leftButtonStackView
     }()
@@ -90,11 +90,11 @@ class HomeTableViewCell: UITableViewCell {
         return commentButton
     }()
     
-    //메세지 버튼
-    lazy var messangerButton: UIButton = {
-        let messangerButton = UIButton()
-        messangerButton.setImage(UIImage(named: "Messanger.png"), for: .normal)
-        return messangerButton
+    //공유 버튼
+    lazy var shareButton: UIButton = {
+        let shareButton = UIButton()
+        shareButton.setImage(UIImage(named: "Messanger.png"), for: .normal)
+        return shareButton
     }()
     
     //인디케이터???

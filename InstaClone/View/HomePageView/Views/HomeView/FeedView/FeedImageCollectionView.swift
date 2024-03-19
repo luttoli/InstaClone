@@ -14,7 +14,6 @@ class FeedImageCollectionView: UICollectionView {
         super.init(frame: .zero, collectionViewLayout: layout)
         self.register(FeedImageCollectionViewCell.self, forCellWithReuseIdentifier: FeedImageCollectionViewCell.identifier)
         self.backgroundColor = .coustomBackgroundColor
-//        self.backgroundColor = .orange
         self.showsHorizontalScrollIndicator = false
         self.allowsMultipleSelection = true
         self.isPagingEnabled = true

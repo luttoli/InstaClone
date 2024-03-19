@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .coustomBackgroundColor
-        
+
         //키보드
         registerForKeyboardNotifications()
         setupUI()

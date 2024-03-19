@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .coustomBackgroundColor
-        
         navigationUI()
         setupUI()
         setData()
@@ -116,7 +115,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.backgroundColor = .coustomBackgroundColor
         
-        //프로필 이미지 버튼 설정, 클릭 이벤트
+        //프로필 이미지 버튼 설정, 클릭 이벤트, 그냥 이미지뷰에서 제스처로
         cell.profileImageButton.setImage(FeedData.feedList[indexPath.row].profileImage, for: .normal)
         cell.profileImageButton.addAction(UIAction(handler: { _ in
             print("프로필 이미지 클릭")
@@ -147,21 +146,58 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }), for: .touchUpInside)
         }
         
+        //좋아요
+//        cell.likeButton
+        
         //세팅버튼 클릭 이벤트
         cell.settingButton.addAction(UIAction(handler: { _ in
             print("세팅 버튼 클릭")
             let settingView = SettingFeedViewController()
-            settingView.modalPresentationStyle = .pageSheet
+            
+            //모달 크기 미디움
+            if let sheet = settingView.sheetPresentationController {
+                sheet.detents = [.medium()]
+                sheet.prefersGrabberVisible = true //Grabber 노출 설정
+            }
+
             self.present(settingView, animated: true)
         }), for: .touchUpInside)
         
+        //피드이미지 콜랙션뷰
 //        cell.feedImageCollectionView
+        
+        //댓글
+        cell.commentButton.addAction(UIAction(handler: { _ in
+            print("댓글 버튼 클릭")
+            let commentView = CommentViewController()
+            
+            if let sheet = commentView.sheetPresentationController {
+                sheet.detents = [.large(), .medium()]
+                sheet.selectedDetentIdentifier = .large //처음부터 큰 뷰가 나오게하는 설정
+                sheet.prefersGrabberVisible = true
+            }
+            
+            self.present(commentView, animated: true)
+        }), for: .touchUpInside)
+        
+        //공유
+//        cell.shareButton
+        
+        //저장
+//        cell.saveButton
+        
+        
+        //이미지
         cell.likebyImage.image = LikedbyData.likedList[indexPath.row].likedImage
+        
+        //좋아요 누른 사람
         cell.likedbyFullText.attributedText = NSMutableAttributedString()
             .regular(string: "Liked by", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
             .bold(string: " \(LikedbyData.likedList[indexPath.row].likedName)", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
             .regular(string: " and", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)
             .bold(string: " \(FeedData.feedList[indexPath.row].likeCount) others", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
+        
+        //피드 내용
         cell.feedInfoLabel.attributedText = NSMutableAttributedString()
             .bold(string: "\(FeedData.feedList[indexPath.row].nickName)", fontName: "SpoqaHanSansNeo-Bold", fontSize: 12)
             .regular(string: "  \(FeedData.feedList[indexPath.row].content)", fontName: "SpoqaHanSansNeo-Regular", fontSize: 12)

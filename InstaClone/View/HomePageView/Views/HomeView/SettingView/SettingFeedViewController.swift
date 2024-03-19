@@ -54,6 +54,7 @@ class SettingFeedViewController: UIViewController {
 
 }
 
+//콜랙션뷰
 extension SettingFeedViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return firstCellTitle.count
@@ -82,6 +83,7 @@ extension SettingFeedViewController: UICollectionViewDataSource, UICollectionVie
     }
 }
 
+//테이블뷰
 extension SettingFeedViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
