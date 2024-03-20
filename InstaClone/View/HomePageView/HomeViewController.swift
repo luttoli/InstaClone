@@ -159,7 +159,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 sheet.detents = [.medium()]
                 sheet.prefersGrabberVisible = true //Grabber 노출 설정
             }
-
             self.present(settingView, animated: true)
         }), for: .touchUpInside)
         
@@ -170,18 +169,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.commentButton.addAction(UIAction(handler: { _ in
             print("댓글 버튼 클릭")
             let commentView = CommentViewController()
+            //네비게이션 추가
+            let navigationController = UINavigationController(rootViewController: commentView)
+            navigationController.navigationBar.backgroundColor = .clear
+            navigationController.modalPresentationStyle = .pageSheet
             
-            if let sheet = commentView.sheetPresentationController {
+            if let sheet = navigationController.sheetPresentationController {
                 sheet.detents = [.large(), .medium()]
                 sheet.selectedDetentIdentifier = .large //처음부터 큰 뷰가 나오게하는 설정
                 sheet.prefersGrabberVisible = true
             }
-            
-            self.present(commentView, animated: true)
+            self.present(navigationController, animated: true)
         }), for: .touchUpInside)
         
         //공유
-//        cell.shareButton
+        cell.shareButton.addAction(UIAction(handler: { _ in
+            print("공유하기 버튼 클릭")
+            let shareView = ShareViewController()
+            
+            if let sheet = shareView.sheetPresentationController {
+                sheet.detents = [.large(), .medium()]
+                sheet.prefersGrabberVisible = true
+                sheet.selectedDetentIdentifier = .medium
+            }
+            self.present(shareView, animated: true)
+        }), for: .touchUpInside)
         
         //저장
 //        cell.saveButton

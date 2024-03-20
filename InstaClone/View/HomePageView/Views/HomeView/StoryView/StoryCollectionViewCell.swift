@@ -77,6 +77,5 @@ class StoryCollectionViewCell: UICollectionViewCell {
             make.width.equalTo(26)
             make.height.equalTo(16)
         }
-        
     }
 }

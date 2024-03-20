@@ -70,6 +70,10 @@
 		B8AA36FD2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */; };
 		B8AA36FF2BA894740053FF97 /* SettingFeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */; };
 		B8AA37062BA9CC140053FF97 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA37052BA9CC140053FF97 /* CommentViewController.swift */; };
+		B8AA37092BAA89AB0053FF97 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA37082BAA89AB0053FF97 /* ShareViewController.swift */; };
+		B8AA370B2BAA8AC70053FF97 /* CommentTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA370A2BAA8AC70053FF97 /* CommentTableView.swift */; };
+		B8AA370D2BAA8B900053FF97 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA370C2BAA8B900053FF97 /* CommentTableViewCell.swift */; };
+		B8AA370F2BAAD0780053FF97 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA370E2BAAD0780053FF97 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -150,6 +154,10 @@
 		B8AA36FC2BA893A80053FF97 /* SettingFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8AA36FE2BA894740053FF97 /* SettingFeedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeedCollectionView.swift; sourceTree = "<group>"; };
 		B8AA37052BA9CC140053FF97 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		B8AA37082BAA89AB0053FF97 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B8AA370A2BAA8AC70053FF97 /* CommentTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableView.swift; sourceTree = "<group>"; };
+		B8AA370C2BAA8B900053FF97 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		B8AA370E2BAAD0780053FF97 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +478,8 @@
 		B8AA37032BA9CA380053FF97 /* ShareView */ = {
 			isa = PBXGroup;
 			children = (
+				B8AA37082BAA89AB0053FF97 /* ShareViewController.swift */,
+				B8AA370E2BAAD0780053FF97 /* SearchBar.swift */,
 			);
 			name = ShareView;
 			path = ../ShareView;
@@ -479,6 +489,8 @@
 			isa = PBXGroup;
 			children = (
 				B8AA37052BA9CC140053FF97 /* CommentViewController.swift */,
+				B8AA370A2BAA8AC70053FF97 /* CommentTableView.swift */,
+				B8AA370C2BAA8B900053FF97 /* CommentTableViewCell.swift */,
 			);
 			path = CommentView;
 			sourceTree = "<group>";
@@ -579,6 +591,7 @@
 				B8AA36E32BA7DD8B0053FF97 /* TVViewController.swift in Sources */,
 				B81C06B22B89CA7300866019 /* CustomTabBarController.swift in Sources */,
 				B81C068E2B89BC6100866019 /* UIStackView.swift in Sources */,
+				B8AA37092BAA89AB0053FF97 /* ShareViewController.swift in Sources */,
 				B81C06D02B8A356D00866019 /* UIImageView.swift in Sources */,
 				B81C06732B89B86D00866019 /* AppDelegate.swift in Sources */,
 				B81C06BD2B89CDDA00866019 /* SearchViewController.swift in Sources */,
@@ -604,6 +617,7 @@
 				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
 				B89615582B94751300F0BD9F /* LikedByModel.swift in Sources */,
 				B8AA36E52BA7DDA70053FF97 /* CameraViewController.swift in Sources */,
+				B8AA370B2BAA8AC70053FF97 /* CommentTableView.swift in Sources */,
 				B8AA36F52BA81E230053FF97 /* SettingFeedViewController.swift in Sources */,
 				B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */,
 				B8AA36EC2BA7EFE10053FF97 /* LocationViewController.swift in Sources */,
@@ -611,7 +625,9 @@
 				B8AA36E12BA7DD650053FF97 /* MessageViewController.swift in Sources */,
 				B81C06D42B8A408800866019 /* LoginViewModel.swift in Sources */,
 				B896154E2B93AF5700F0BD9F /* StoryHeaderView.swift in Sources */,
+				B8AA370F2BAAD0780053FF97 /* SearchBar.swift in Sources */,
 				B896153C2B92D61200F0BD9F /* UICollectionViewCell.swift in Sources */,
+				B8AA370D2BAA8B900053FF97 /* CommentTableViewCell.swift in Sources */,
 				B81C06B02B89CA3F00866019 /* Constants.swift in Sources */,
 				B8AA36EE2BA80F110053FF97 /* HomeViewModel.swift in Sources */,
 				B89615312B8CC76200F0BD9F /* SignupViewController.swift in Sources */,
