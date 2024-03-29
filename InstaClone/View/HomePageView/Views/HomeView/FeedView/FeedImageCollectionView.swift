@@ -91,7 +91,7 @@ extension FeedImageCollectionView: UICollectionViewDataSource, UICollectionViewD
         }
 
 //        guard let image = FeedData.feedList[indexPath.row].feedImage[indexPath.row]
-        
+//        
 //        guard let imageUrl = FeedData.feedImage[indexPath.row] else {
 //            return cell
 //        }
@@ -109,8 +109,8 @@ extension FeedImageCollectionView: UICollectionViewDataSource, UICollectionViewD
                 }
             }
         }
-        
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

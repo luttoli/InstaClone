@@ -15,7 +15,9 @@ struct Constants {
     static let coustomCornerRadius: CGFloat = 5.0
     
     static let coustomFontSize30: CGFloat = 30
-    static let coustomFontSize25: CGFloat = 25
+    static let coustomFontSize28: CGFloat = 24
+    static let coustomFontSize26: CGFloat = 24
+    static let coustomFontSize24: CGFloat = 24
     static let coustomFontSize22: CGFloat = 22
     static let coustomFontSize20: CGFloat = 20
     static let coustomFontSize18: CGFloat = 18

@@ -9,7 +9,7 @@ import UIKit
 
 class LocationViewController: UIViewController {
     //
-    var locationViewModel = LocationViewModel(feed: Feed(nickName: String(), profileImage: UIImage(), location: String(), feedImage: [String()], likeStatus: Bool(), likedBy: [], likeCount: Int(), content: String(), comment: [String()]))
+    var locationViewModel = LocationViewModel(feed: Feed(nickName: String(), profileImage: UIImage(), location: String(), feedImage: [String()], likeStatus: Bool(), likedBy: [], likeCount: Int(), content: String(), comment: []))
 
     override func viewDidLoad() {
         super.viewDidLoad()

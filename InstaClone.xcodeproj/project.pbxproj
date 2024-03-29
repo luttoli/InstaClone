@@ -52,7 +52,6 @@
 		B89615542B942B0B00F0BD9F /* FeedImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615532B942B0B00F0BD9F /* FeedImageCollectionView.swift */; };
 		B89615562B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615552B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift */; };
 		B89615582B94751300F0BD9F /* LikedByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615572B94751300F0BD9F /* LikedByModel.swift */; };
-		B896155A2B94756800F0BD9F /* LikedbyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615592B94756800F0BD9F /* LikedbyData.swift */; };
 		B896155C2B94D00E00F0BD9F /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */; };
 		B89615622B9608F300F0BD9F /* FeedImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615612B9608F300F0BD9F /* FeedImageData.swift */; };
 		B89615642B96094700F0BD9F /* FeedImageUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */; };
@@ -74,6 +73,7 @@
 		B8AA370B2BAA8AC70053FF97 /* CommentTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA370A2BAA8AC70053FF97 /* CommentTableView.swift */; };
 		B8AA370D2BAA8B900053FF97 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA370C2BAA8B900053FF97 /* CommentTableViewCell.swift */; };
 		B8AA370F2BAAD0780053FF97 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA370E2BAAD0780053FF97 /* SearchBar.swift */; };
+		B8AA37182BB26C9C0053FF97 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA37172BB26C9C0053FF97 /* CommentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,7 +136,6 @@
 		B89615532B942B0B00F0BD9F /* FeedImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCollectionView.swift; sourceTree = "<group>"; };
 		B89615552B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B89615572B94751300F0BD9F /* LikedByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedByModel.swift; sourceTree = "<group>"; };
-		B89615592B94756800F0BD9F /* LikedbyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedbyData.swift; sourceTree = "<group>"; };
 		B896155B2B94D00D00F0BD9F /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		B89615612B9608F300F0BD9F /* FeedImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageData.swift; sourceTree = "<group>"; };
 		B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageUrlModel.swift; sourceTree = "<group>"; };
@@ -158,6 +157,7 @@
 		B8AA370A2BAA8AC70053FF97 /* CommentTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableView.swift; sourceTree = "<group>"; };
 		B8AA370C2BAA8B900053FF97 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		B8AA370E2BAAD0780053FF97 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B8AA37172BB26C9C0053FF97 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +233,7 @@
 				B89615512B9425B300F0BD9F /* FeedData.swift */,
 				B89615632B96094700F0BD9F /* FeedImageUrlModel.swift */,
 				B89615572B94751300F0BD9F /* LikedByModel.swift */,
-				B89615592B94756800F0BD9F /* LikedbyData.swift */,
+				B8AA37172BB26C9C0053FF97 /* CommentModel.swift */,
 				B896153F2B92DC2B00F0BD9F /* StoryModel.swift */,
 				B89615412B92DC7100F0BD9F /* StoryData.swift */,
 			);
@@ -605,7 +605,6 @@
 				B81C068C2B89BC5B00866019 /* UIButton.swift in Sources */,
 				B8AA36F92BA83DCA0053FF97 /* SettingFeedTableView.swift in Sources */,
 				B89615542B942B0B00F0BD9F /* FeedImageCollectionView.swift in Sources */,
-				B896155A2B94756800F0BD9F /* LikedbyData.swift in Sources */,
 				B81C06BF2B89CDE500866019 /* NewViewController.swift in Sources */,
 				B81C06C32B89CDFD00866019 /* MyViewController.swift in Sources */,
 				B89615562B942B2E00F0BD9F /* FeedImageCollectionViewCell.swift in Sources */,
@@ -614,6 +613,7 @@
 				B896153A2B92D5DD00F0BD9F /* StoryCollectionViewCell.swift in Sources */,
 				B8AA36F02BA80F1D0053FF97 /* ProfileViewModel.swift in Sources */,
 				B89615422B92DC7100F0BD9F /* StoryData.swift in Sources */,
+				B8AA37182BB26C9C0053FF97 /* CommentModel.swift in Sources */,
 				B896152D2B8CC74300F0BD9F /* ForgotPasswordViewController.swift in Sources */,
 				B89615582B94751300F0BD9F /* LikedByModel.swift in Sources */,
 				B8AA36E52BA7DDA70053FF97 /* CameraViewController.swift in Sources */,

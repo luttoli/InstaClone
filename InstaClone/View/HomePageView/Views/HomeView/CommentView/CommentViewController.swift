@@ -65,15 +65,18 @@ class CommentViewController: UIViewController {
 //
 extension CommentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fridend6FeedComment.count
+        return CommentData.commentList1.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.identifier, for: indexPath) as? CommentTableViewCell else { return UITableViewCell() }
         
-        cell.profileNickNameButton.setTitle("luttoli", for: .normal)
-        cell.comment.text = fridend6FeedComment[indexPath.row]
-//        cell.comment.text = FeedData.feedList[indexPath.row].comment[indexPath.row]   
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        cell.backgroundColor = .coustomBackgroundColor
+        
+        //
+        cell.profileNickNameButton.setTitle(FeedData.feedList[indexPath.row].comment[indexPath.row].name, for: .normal)
+        cell.comment.text = FeedData.feedList[indexPath.row].comment[indexPath.row].comments
         
         cell.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
         

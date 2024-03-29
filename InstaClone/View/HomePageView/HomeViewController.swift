@@ -7,9 +7,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     //홈 화면의 전체 테이블뷰
     lazy var homeTableView = HomeTableView()
+    
+    let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,11 @@ class HomeViewController: UIViewController {
         //왼쪽 카메라 버튼 클릭 이벤트
         leftCameraButton.addAction(UIAction(handler: { _ in
             print("왼쪽 카메라 버튼 클릭했다.")
-            let cameraView = CameraViewController()
-            self.navigationController?.pushViewController(cameraView, animated: true)
+            
+            self.imagePickerController.delegate = self
+            self.imagePickerController.sourceType = .camera
+            self.present(self.imagePickerController, animated: true, completion: nil)
+            
         }), for: .touchUpInside)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftCameraButton)
@@ -84,6 +89,7 @@ class HomeViewController: UIViewController {
         homeTableView.dataSource = self
     }
     
+    var tableViewIndexPath: IndexPath?
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {

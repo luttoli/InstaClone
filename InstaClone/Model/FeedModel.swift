@@ -18,5 +18,5 @@ struct Feed {
     let likedBy: [LikedByModel]
     let likeCount: Int
     let content: String
-    let comment: [String?]
+    let comment: [CommentModel]
 }

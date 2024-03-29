@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
         loginView.scrollView.contentInset = contentInset
         loginView.scrollView.scrollIndicatorInsets = contentInset
     }
+    
     //뷰 누르면 숨기기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         loginView.endEditing(true)
