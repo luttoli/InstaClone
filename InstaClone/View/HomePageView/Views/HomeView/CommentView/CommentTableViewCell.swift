@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CommentTableViewCell: UITableViewCell {
     //전체 스택뷰?

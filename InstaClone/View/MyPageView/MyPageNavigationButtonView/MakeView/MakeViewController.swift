@@ -1,13 +1,13 @@
 //
-//  MyViewController.swift
+//  MakeViewController.swift
 //  InstaClone
 //
-//  Created by 김지훈 on 2/24/24.
+//  Created by 김지훈 on 4/2/24.
 //
 
 import UIKit
 
-class MyViewController: UIViewController {
+class MakeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

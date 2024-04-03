@@ -31,7 +31,7 @@ class CustomTabBarController: UITabBarController {
         let alarmNavigationController = UINavigationController(rootViewController: alarmViewController)
         alarmNavigationController.tabBarItem = alarmTabBarItem
         
-        let myViewController = MyViewController()
+        let myViewController = MyPageViewController()
         let myTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "Profile.png"), tag: 4)
         let myNavigationController = UINavigationController(rootViewController: myViewController)
         myNavigationController.tabBarItem = myTabBarItem

@@ -96,7 +96,7 @@ extension FeedImageCollectionView: UICollectionViewDataSource, UICollectionViewD
 //            return cell
 //        }
         
-        guard let imageUrl = steak[indexPath.item] else {
+        guard let imageUrl = steak[indexPath.row] else {
             return cell
         }
 

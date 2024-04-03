@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CommentTableView: UITableView {
     override init(frame: CGRect, style: UITableView.Style) {
